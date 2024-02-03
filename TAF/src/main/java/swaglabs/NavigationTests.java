@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import swaglabs.pages.LoginPage;
 
 import java.util.List;
 
@@ -14,10 +15,13 @@ public class NavigationTests extends CommonSwagLabsTestSteps {
       //Előfeltétel
       // oldal betöltése
       driver.get("https://www.saucedemo.com");
+      LoginPage loginPage =new LoginPage(driver);
 
       // 1. Bejelentkezés standard_user username-el és secret_sauce jelszóval
-      loginWithUserAndPassword("standard_user", "secret_sauce");
-
+      // loginWithUserAndPassword("standard_user", "secret_sauce");
+      loginPage.fillUserNameInput("standard_user");
+      loginPage.fillPasswordInput("secret_sauce");
+      loginPage.clickLoginButton();
       // 2. Sauce Labs Onesie termék címére rákattintás
 
       // WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[@id=\"item_2_title_link\"]/div"));
