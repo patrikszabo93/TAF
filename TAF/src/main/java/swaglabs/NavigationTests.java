@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import swaglabs.pages.LoginPage;
+import swaglabs.pages.ProductListPage;
 
 import java.util.List;
 
@@ -26,8 +27,8 @@ public class NavigationTests extends CommonSwagLabsTestSteps {
 
       // WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[@id=\"item_2_title_link\"]/div"));
       // WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[contains(text(),'Sauce Labs Onesie')]"));
-      List<WebElement> itemTitles = driver.findElements(By.className("inventory_item_name"));
-      itemTitles.get(4).click();
+      ProductListPage productListPage = new ProductListPage(driver);
+      productListPage.clickOnOensieProduct();
       // SauceLabsOnesieButton.click();
 
       //Elvárt működés
