@@ -18,9 +18,19 @@ public class NavigationTests extends CommonSwagLabsTestSteps {
        WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[@id=\"item_2_title_link\"]/div"));
        SauceLabsOnesieButton.click();
 
-     //  Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory-item.html?id=2");
+       boolean isWebpageContainsThisString = driver.getPageSource().contains("Sauce Labs Onesie");
+       Assert.assertTrue(isWebpageContainsThisString);
 
-       boolean isWebpageContainsBadge = driver.getPageSource().contains("Sauce Labs Onesie");
-       Assert.assertTrue(isWebpageContainsBadge);
+
+       WebElement BacktoProductButton = driver.findElement(By.name("back-to-products"));
+       BacktoProductButton.click();
+
+       WebElement TestAllTheThingsButton = driver.findElement(By.xpath("//*[@id=\"item_3_title_link\"]/div"));
+       TestAllTheThingsButton.click();
+
+       boolean isWebpageContainsThisString2 = driver.getPageSource().contains("Test.allTheThings() T-Shirt (Red)");
+       Assert.assertTrue(isWebpageContainsThisString2);
     }
+
+
 }
