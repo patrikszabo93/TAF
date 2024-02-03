@@ -15,7 +15,8 @@ public class NavigationTests extends CommonSwagLabsTestSteps {
 
        loginWithUserAndPassword("standard_user","secret_sauce");
 
-       WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[@id=\"item_2_title_link\"]/div"));
+      // WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[@id=\"item_2_title_link\"]/div"));
+       WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[contains(text(),'Sauce Labs Onesie')]"));
        SauceLabsOnesieButton.click();
 
        boolean isWebpageContainsThisString = driver.getPageSource().contains("Sauce Labs Onesie");
