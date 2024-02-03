@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class NavigationTests extends CommonSwagLabsTestSteps {
 
    @Test
@@ -16,8 +18,10 @@ public class NavigationTests extends CommonSwagLabsTestSteps {
        loginWithUserAndPassword("standard_user","secret_sauce");
 
       // WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[@id=\"item_2_title_link\"]/div"));
-       WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[contains(text(),'Sauce Labs Onesie')]"));
-       SauceLabsOnesieButton.click();
+      // WebElement SauceLabsOnesieButton = driver.findElement(By.xpath("//*[contains(text(),'Sauce Labs Onesie')]"));
+       List<WebElement> itemTitles = driver.findElements(By.className("inventory_item_name"));
+       itemTitles.get(4).click();
+      // SauceLabsOnesieButton.click();
 
        boolean isWebpageContainsThisString = driver.getPageSource().contains("Sauce Labs Onesie");
        Assert.assertTrue(isWebpageContainsThisString);
