@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SwagLabsEndToEndTests extends DriverFactory {
+public class EndToEndTests extends CommonSwagLabsTestSteps{
 
     @Test(priority = -1)
     @Description("Standard user log in and buy a product.")  //teszteset rövid mondatszerű jellemzője
@@ -256,15 +256,5 @@ public class SwagLabsEndToEndTests extends DriverFactory {
         Assert.assertEquals(pricesInActualOrder, pricesSorted);
     }
 
-    public void loginWithUserAndPassword(String user, String password) {
-        // when user types valid auth data
-        WebElement userNameInput = driver.findElement(By.name("user-name"));
-        userNameInput.sendKeys(user);
 
-        WebElement passwordInput = driver.findElement(By.name("password"));
-        passwordInput.sendKeys(password);
-
-        WebElement loginButton = driver.findElement(By.name("login-button"));
-        loginButton.click();
-    }
 }
