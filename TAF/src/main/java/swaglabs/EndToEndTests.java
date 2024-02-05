@@ -1,18 +1,18 @@
 package swaglabs;
 
-import common.DriverFactory;
 import jdk.jfr.Description;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import swaglabs.pages.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class EndToEndTests extends CommonSwagLabsTestSteps{
+public class EndToEndTests extends CommonSwagLabsTestSteps {
 
     @Test(priority = -1)
     @Description("Standard user log in and buy a product.")  //teszteset rövid mondatszerű jellemzője
@@ -21,47 +21,42 @@ public class EndToEndTests extends CommonSwagLabsTestSteps{
         driver.get("https://www.saucedemo.com");  //weboldal betöltése
         // Teszt lépések
 
+        LoginPage loginPage = new LoginPage(driver);
 //        1. Beírjuk a standard_user a user name mezőbe
-        WebElement userNameInput = driver.findElement(By.id("user-name"));
-        userNameInput.sendKeys("standard_user");
+        loginPage.fillUserNameInput("standard_user");
 //        2. Beírjuk a secret_sauce a password mezőbe
-        WebElement passwordInput = driver.findElement(By.id("password"));
-        passwordInput.sendKeys("secret_sauce");
+        loginPage.fillPasswordInput("secret_sauce");
 //        3. Rákattintunk a Login gombra
-        WebElement loginButton = driver.findElement(By.id("login-button"));
-        loginButton.click();
+        loginPage.clickLoginButton();
 //        4. Rákattintunk az "Add to cart" gombjára a "Sauce Labs Bolt T-Shirt" terméknek
-        WebElement tShirtCartButton = driver.findElement(By.id("add-to-cart-sauce-labs-bolt-t-shirt"));
-        tShirtCartButton.click();
+        ProductListPage productListPage = new ProductListPage(driver);
+        productListPage.clickTShirtCartButton();
 //        5. Rákattintunk a Kosár gombra a jobb felső sarokban
-        WebElement cartButton = driver.findElement(By.className("shopping_cart_link"));
-        cartButton.click();
+        productListPage.clickOnCartButton();
 //        6. Rákattintunk a Checkout gombra
-        WebElement checkoutButton = driver.findElement(By.id("checkout"));
-        checkoutButton.click();
+        CartPage cartPage = new CartPage(driver);
+        cartPage.clickOnCheckoutButton();
 //        7. Kitöltöm a First name mezőt "Elek" értékkel
-        WebElement firstNameInput = driver.findElement(By.id("first-name"));
-        firstNameInput.sendKeys("Elek");
 //        8. Kitöltöm a Last name mezőt "Mekk" értékkel
-        WebElement lastNameInput = driver.findElement(By.id("last-name"));
-        // firstNameInput.clear(); // clear paranccsal ki lehet törölni az input field tartalmát
-        lastNameInput.sendKeys("Mekk");
 //        9. Kitöltöm a Zip/Postal code  mezőt "1111" értékkel
-        WebElement zipCodeInput = driver.findElement(By.id("postal-code"));
-        zipCodeInput.sendKeys("1111");
 //        10. Rákattintok a "Continue" gombra
-        WebElement continueButton = driver.findElement(By.id("continue"));
-        continueButton.click();
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.fillFirstNameInput("Elek");
+        checkoutPage.fillLastNameInput("Mekk");
+        checkoutPage.fillZipCodeInput("1111");
+        checkoutPage.clickContinueButton();
+
 //        11. Rákattintok a "Finish" gombra
-        WebElement finishButton = driver.findElement(By.id("finish"));
-        finishButton.click();
+        CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage(driver);
+        checkoutOverviewPage.clickFinishButton();
+
 //        12. Rákattintok a "Back Home" gombra
-        WebElement backHomeButton = driver.findElement(By.id("back-to-products"));
-        backHomeButton.click();
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+        checkoutCompletePage.clickBackHomeButton();
         // Elvárt működés
 
 //        - A felület címe "Products"
-        WebElement productsTitle = driver.findElement(By.className("title"));
+        WebElement productsTitle = productListPage.getPageTitle();
         Assert.assertNotNull(productsTitle);
         Assert.assertEquals(productsTitle.getText(), "Products");
 
@@ -79,6 +74,40 @@ public class EndToEndTests extends CommonSwagLabsTestSteps{
         //System.out.println(driver.getPageSource().contains("shopping_cart_badge"));  // true vagy false. false ha nem szerepel az oldal forrásában a "shopping_cart_badge"
         boolean isWebpageContainsBadge = driver.getPageSource().contains("shopping_cart_badge");
         Assert.assertFalse(isWebpageContainsBadge);
+    }
+
+    @Test(priority = 1)
+    @Description("Standard user log in and buy multiple products with cart modification with POM usage.")
+    //teszteset rövid mondatszerű jellemzője
+    public void standardUserMultipleProductPathWithPOM() {
+
+        // FELADAT
+        driver.get("https://www.saucedemo.com");
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.fillUserNameInput("standard_user");
+        loginPage.fillPasswordInput("secret_sauce");
+        loginPage.clickLoginButton();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/inventory.html");
+
+        ProductListPage productListPage = new ProductListPage(driver);
+        productListPage.clickTShirtCartButton();
+        productListPage.clickOnBackPack();
+        productListPage.clickOnLightCart();
+        productListPage.clickOnCartButton();
+        productListPage.removeBackpack();
+
+        CartPage cartPage = new CartPage(driver);
+        cartPage.clickOnCheckoutButton();
+
+        CheckoutPage checkoutPage = new CheckoutPage(driver);
+        checkoutPage.fillFirstNameInput("Elek");
+        checkoutPage.fillLastNameInput("Mekk");
+        checkoutPage.fillZipCodeInput("1111");
+        checkoutPage.clickContinueButton();
+        CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage(driver);
+        checkoutOverviewPage.clickFinishButton();
+
+
     }
 
     @Test(priority = 1)
@@ -112,8 +141,8 @@ public class EndToEndTests extends CommonSwagLabsTestSteps{
         WebElement cartButton = driver.findElement(By.className("shopping_cart_link"));
         cartButton.click();
 //        8. Remove gombbal eltávolítjuk a középső terméke
-        WebElement removeBackbackButton = driver.findElement(By.cssSelector("button[data-test='remove-sauce-labs-backpack']"));
-        removeBackbackButton.click();
+        WebElement removeBackpackButton = driver.findElement(By.cssSelector("button[data-test='remove-sauce-labs-backpack']"));
+        removeBackpackButton.click();
 //        9. Rákattintunk a Checkout gombra
         WebElement checkoutButton = driver.findElement(By.name("checkout"));
         checkoutButton.click();

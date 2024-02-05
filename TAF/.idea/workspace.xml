@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aea14bd8-eb17-49d8-8486-035d8ff21ace" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/EndToEndTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/EndToEndTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/pages/ProductListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/pages/ProductListPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,30 +64,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build TAF.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.TAF [assemble].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.NavigationTests.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.NavigationTests.navigateToProductDetailsTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SwagLabsEndToEndTests.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/IntelliJ_IDEA/TAF/TAF&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build TAF.executor": "Run",
+    "Gradle.TAF [assemble].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.EndToEndTests.standardUserHappyPath.executor": "Run",
+    "TestNG.NavigationTests.executor": "Run",
+    "TestNG.NavigationTests.navigateToProductDetailsTest.executor": "Run",
+    "TestNG.SwagLabsEndToEndTests.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/IntelliJ_IDEA/TAF/TAF",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\IntelliJ_IDEA\TAF\TAF\src\main\java\common" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NavigationTests.navigateToProductDetailsTest">
+  <component name="RunManager" selected="TestNG.EndToEndTests.standardUserMultipleProductPath">
     <configuration name="TAF [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -108,7 +111,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="EndToEndTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="EndToEndTests.standardUserHappyPath" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF.main" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +121,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="swaglabs" />
       <option name="MAIN_CLASS_NAME" value="swaglabs.EndToEndTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="standardUserHappyPath" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EndToEndTests.standardUserMultipleProductPath" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="swaglabs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="swaglabs" />
+      <option name="MAIN_CLASS_NAME" value="swaglabs.EndToEndTests" />
+      <option name="METHOD_NAME" value="standardUserMultipleProductPath" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -162,6 +184,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.EndToEndTests.standardUserMultipleProductPath" />
+        <item itemvalue="TestNG.EndToEndTests.standardUserHappyPath" />
         <item itemvalue="TestNG.NavigationTests.navigateToProductDetailsTest" />
         <item itemvalue="TestNG.NavigationTests" />
         <item itemvalue="Gradle.TAF [assemble]" />
