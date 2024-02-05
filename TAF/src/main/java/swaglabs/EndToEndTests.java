@@ -104,8 +104,25 @@ public class EndToEndTests extends CommonSwagLabsTestSteps {
         checkoutPage.fillLastNameInput("Mekk");
         checkoutPage.fillZipCodeInput("1111");
         checkoutPage.clickContinueButton();
+
         CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage(driver);
         checkoutOverviewPage.clickFinishButton();
+
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+        WebElement confirmText = checkoutCompletePage.getCompleteMessageWebElement();
+        String confirmTextString = confirmText.getText();
+        Assert.assertEquals(confirmTextString, "Thank you for your order!");
+
+        MenuSubPage menuSubPage = new MenuSubPage(driver);
+        menuSubPage.logoutFromMenu();
+        Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/");
+
+
+
+
+
+
+
 
 
     }

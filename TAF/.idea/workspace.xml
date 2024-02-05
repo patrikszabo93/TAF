@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aea14bd8-eb17-49d8-8486-035d8ff21ace" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/EndToEndTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/EndToEndTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/pages/ProductListPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/pages/ProductListPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/NavigationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/NavigationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/pages/CheckoutCompletePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/pages/CheckoutCompletePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,9 @@
     "Gradle.TAF [assemble].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.EndToEndTests.executor": "Run",
     "TestNG.EndToEndTests.standardUserHappyPath.executor": "Run",
+    "TestNG.EndToEndTests.standardUserMultipleProductPath.executor": "Run",
     "TestNG.NavigationTests.executor": "Run",
     "TestNG.NavigationTests.navigateToProductDetailsTest.executor": "Run",
     "TestNG.SwagLabsEndToEndTests.executor": "Run",
@@ -88,28 +90,23 @@
       <recent name="C:\IntelliJ_IDEA\TAF\TAF\src\main\java\common" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.EndToEndTests.standardUserMultipleProductPath">
-    <configuration name="TAF [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="assemble" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
+  <component name="RunManager" selected="TestNG.EndToEndTests">
+    <configuration name="EndToEndTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TAF.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="swaglabs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="swaglabs" />
+      <option name="MAIN_CLASS_NAME" value="swaglabs.EndToEndTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="EndToEndTests.standardUserHappyPath" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF.main" />
@@ -184,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.EndToEndTests" />
         <item itemvalue="TestNG.EndToEndTests.standardUserMultipleProductPath" />
         <item itemvalue="TestNG.EndToEndTests.standardUserHappyPath" />
         <item itemvalue="TestNG.NavigationTests.navigateToProductDetailsTest" />
         <item itemvalue="TestNG.NavigationTests" />
-        <item itemvalue="Gradle.TAF [assemble]" />
       </list>
     </recent_temporary>
   </component>

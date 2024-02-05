@@ -51,6 +51,7 @@ public class NavigationTests extends CommonSwagLabsTestSteps {
 
       boolean isWebpageContainsThisString2 = driver.getPageSource().contains("Test.allTheThings() T-Shirt (Red)");
       Assert.assertTrue(isWebpageContainsThisString2);
+
    }
 
 
