@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
     private final By usernameInputBy = By.name("user-name");
     private final By passwordInputBy = By.name("password");
-    private final By loginButtonBy = By.name("login-buttin");
+    private final By loginButtonBy = By.name("login-button");
     private WebDriver webDriver;
 
     public LoginPage(WebDriver driver) {

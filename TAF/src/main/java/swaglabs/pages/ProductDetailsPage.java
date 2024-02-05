@@ -2,6 +2,7 @@ package swaglabs.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class ProductDetailsPage {
     WebDriver driver;
@@ -12,7 +13,10 @@ public class ProductDetailsPage {
         this.driver = driver;
     }
 
-
+    public String getProductTitle() {
+        WebElement productTitle = driver.findElement(productTitleBy);
+        return productTitle.getText();
+    }
 
 
 }
