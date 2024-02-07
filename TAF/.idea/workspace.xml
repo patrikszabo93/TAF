@@ -40,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
         <option value="Class" />
       </list>
     </option>
@@ -71,12 +72,14 @@
     "TestNG.EndToEndTests.executor": "Run",
     "TestNG.EndToEndTests.standardUserHappyPath.executor": "Run",
     "TestNG.EndToEndTests.standardUserMultipleProductPath.executor": "Run",
+    "TestNG.FormTests.executor": "Run",
     "TestNG.NavigationTests.executor": "Run",
     "TestNG.NavigationTests.navigateToProductDetailsTest.executor": "Run",
+    "TestNG.SearchTests.searchForWeather.executor": "Run",
     "TestNG.SwagLabsEndToEndTests.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/IntelliJ_IDEA/TAF/TAF/src/main/java",
+    "last_directory_selection": "C:/IntelliJ_IDEA/TAF/TAF/src/main/java/tutorialsPoint",
     "last_opened_file_path": "C:/IntelliJ_IDEA/TAF/TAF",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -89,7 +92,7 @@
       <recent name="C:\IntelliJ_IDEA\TAF\TAF\src\main\java\common" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.EndToEndTests">
+  <component name="RunManager" selected="TestNG.FormTests">
     <configuration name="EndToEndTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF.main" />
       <extension name="coverage">
@@ -143,16 +146,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavigationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FormTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="swaglabs.*" />
+          <option name="PATTERN" value="tutorialsPoint.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="swaglabs" />
-      <option name="MAIN_CLASS_NAME" value="swaglabs.NavigationTests" />
+      <option name="PACKAGE_NAME" value="tutorialsPoint" />
+      <option name="MAIN_CLASS_NAME" value="tutorialsPoint.FormTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -160,17 +163,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NavigationTests.navigateToProductDetailsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchTests.searchForWeather" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TAF.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="swaglabs.*" />
+          <option name="PATTERN" value="google.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="swaglabs" />
-      <option name="MAIN_CLASS_NAME" value="swaglabs.NavigationTests" />
-      <option name="METHOD_NAME" value="navigateToProductDetailsTest" />
+      <option name="PACKAGE_NAME" value="google" />
+      <option name="MAIN_CLASS_NAME" value="google.SearchTests" />
+      <option name="METHOD_NAME" value="searchForWeather" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -180,11 +183,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FormTests" />
+        <item itemvalue="TestNG.SearchTests.searchForWeather" />
         <item itemvalue="TestNG.EndToEndTests" />
         <item itemvalue="TestNG.EndToEndTests.standardUserMultipleProductPath" />
         <item itemvalue="TestNG.EndToEndTests.standardUserHappyPath" />
-        <item itemvalue="TestNG.NavigationTests.navigateToProductDetailsTest" />
-        <item itemvalue="TestNG.NavigationTests" />
       </list>
     </recent_temporary>
   </component>
