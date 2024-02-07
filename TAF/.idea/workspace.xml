@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aea14bd8-eb17-49d8-8486-035d8ff21ace" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/EndToEndTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/EndToEndTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/NavigationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/NavigationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/swaglabs/pages/CheckoutCompletePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/swaglabs/pages/CheckoutCompletePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +76,7 @@
     "TestNG.SwagLabsEndToEndTests.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/IntelliJ_IDEA/TAF/TAF/src/main/java",
     "last_opened_file_path": "C:/IntelliJ_IDEA/TAF/TAF",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
