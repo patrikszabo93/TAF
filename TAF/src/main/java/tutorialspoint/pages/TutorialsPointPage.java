@@ -99,4 +99,9 @@ public class TutorialsPointPage {
         WebElement loginButton = driver.findElement(loginButtonBy);
         loginButton.click();
     }
+    public boolean isLoginButtonClickable(){
+        WebElement loginButton = driver.findElement(loginButtonBy);
+        return loginButton.isDisplayed()&& loginButton.isEnabled();
+    }
+
 }

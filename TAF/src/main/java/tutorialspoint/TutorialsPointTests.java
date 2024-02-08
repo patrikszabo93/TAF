@@ -22,7 +22,7 @@ public class TutorialsPointTests extends DriverFactory {
         tutorialsPointPage.fillCurrentAddressInput("Budapest");
         tutorialsPointPage.selectState("Rajasthan");
         tutorialsPointPage.selectCity("Agra");
-        Assert.assertTrue();
+        Assert.assertTrue(tutorialsPointPage.isLoginButtonClickable());
         tutorialsPointPage.clickLoginButton();
     }
 }
